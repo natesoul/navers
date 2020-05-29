@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html>
+<meta charset="UTF-8"> 
+
 
 <head>
 	<title>
     Naver Scrape
   </title>
-  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+  
 </head>
 
 <body cz-shortcut-listen="true">
     <header>
-      <h1>고수 {{count}}화</h1>
+      <h1>Select Comic title</h1>
     </header>
-    <main style="background:#FFFFFF" margin=0 padding=0>
-        {% for apple in pictures %}
-        <img src="{{apple}}">
-        {% endfor %}
-    </main>
+      </header>
+  <main class="main">
+    <div class="selectWindow">
+      <form class="checkForm" action="/report">
+        <h4>Select the subreddits you're interested on:</h4>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="resultWindow">
+      <p>fjflaksdjf</p>
+    </div>
+  </main>
+  <script charset="utf-8">
+    titles = {{comicTitles | safe}}
+    form = document.querySelector(".checkForm");
+    for (i in titles) {
+        input = document.createElement("input");
+        input.type = "checkbox";
+        input.name = titles[i];
+        input.id = titles[i];
+        input.value = titles[i];
+        form.appendChild(input);
+        
+    }
+  </script>

@@ -1,0 +1,23 @@
+
+.main {
+    display:flex;
+}
+.selectWindow {
+    width : 50%;
+    height : 100%;
+    border : solid 5px black;
+    background-color: grey;
+    margin : 5px;
+}
+
+.resultWindow {
+    width : 50%;
+    height :100%;
+    border : solid 5px black;
+    background-color: red;
+    margin :5px;
+}
+
+.checkForm {
+    display:block;
+}
